@@ -1,504 +1,345 @@
 # 宠物属性部分
 from PublicReference.equipment.base_item import Item
 
-宠物列表 = [None] * 21
-
-
-class 宠物20(Item):
-    显示名称 = '(22)至尊·超越时空·厄俄斯'
-    名称 = '超越时空·厄俄斯'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 160
-        属性.智力 += 160
-        属性.所有属性强化加成(25)
-        属性.技能等级加成('所有', 1, 95, 1)
-        属性.加算冷却缩减 += 0.05
-        属性.百分比三攻加成(0.20)
-        属性.附加伤害加成(0.15)
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +160<br>'
-        temp += '智力 +160<br>'
-        temp += '所有属性强化 +25<br>'
-        temp += 'Lv1-95 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        temp += '百分比三攻 +20%<br>'
-        temp += '附加伤害 +15%<br>'
-        return temp
-
-
-class 宠物19(Item):
-    显示名称 = '(22)至尊·超越时空·赫斯'
-    名称 = '超越时空·赫斯'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 160
-        属性.智力 += 160
-        属性.所有属性强化加成(25)
-        属性.技能等级加成('所有', 1, 95, 1)
-        属性.加算冷却缩减 += 0.05
-        属性.百分比三攻加成(0.15)
-        属性.附加伤害加成(0.20)
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +160<br>'
-        temp += '智力 +160<br>'
-        temp += '所有属性强化 +25<br>'
-        temp += 'Lv1-95 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        temp += '百分比三攻 +15%<br>'
-        temp += '附加伤害 +20%<br>'
-        return temp
+宠物列表 = [None] * 19
 
 
 class 宠物18(Item):
-    显示名称 = '(22)普通·次元探险家·厄俄斯'
-    名称 = '次元探险家·厄俄斯'
+    显示名称 = 'SD Kazan'
+    名称 = 'SD Kazan'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 150
-        属性.智力 += 150
-        属性.所有属性强化加成(25)
-        属性.技能等级加成('所有', 1, 95, 1)
-        属性.加算冷却缩减 += 0.05
-        属性.百分比三攻加成(0.12)
-        属性.附加伤害加成(0.10)
+        属性.力量 += 30
+        属性.智力 += 30
+        属性.百分比三攻加成(0.15)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +160<br>'
-        temp += '智力 +160<br>'
-        temp += '所有属性强化 +25<br>'
-        temp += 'Lv1-95 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        temp += '百分比三攻 +12%<br>'
-        temp += '附加伤害 +10%<br>'
+        temp += 'Strength +30<br>'
+        temp += 'Intelligence +30<br>'
+        temp += 'Physical/Magical/Independent Atk +15%<br>'
         return temp
+    
 
 
 class 宠物17(Item):
-    显示名称 = '(22)普通·次元探险家·赫斯'
-    名称 = '次元探险家·赫斯'
+    显示名称 = 'SD Tiamat'
+    名称 = 'SD Tiamat'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 150
-        属性.智力 += 150
-        属性.所有属性强化加成(25)
-        属性.技能等级加成('所有', 1, 95, 1)
-        属性.加算冷却缩减 += 0.05
-        属性.百分比三攻加成(0.10)
-        属性.附加伤害加成(0.12)
+        属性.力量 += 30
+        属性.智力 += 30
+        属性.伤害增加加成(0.15)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +160<br>'
-        temp += '智力 +160<br>'
-        temp += '所有属性强化 +25<br>'
-        temp += 'Lv1-95 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        temp += '百分比三攻 +10%<br>'
-        temp += '附加伤害 +12%<br>'
+        temp += 'Strength +30<br>'
+        temp += 'Intelligence +30<br>'
+        temp += 'Attack Damage +15%<br>'
         return temp
-
+    
 
 class 宠物16(Item):
-    显示名称 = '(21)至尊·火神的化身'
-    名称 = '火神的化身'
+    显示名称 = 'SD Berias'
+    名称 = 'SD Berias'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 160
-        属性.智力 += 160
-        属性.所有属性强化加成(25)
-        属性.技能等级加成('所有', 1, 80, 1)
-        属性.加算冷却缩减 += 0.05
-        属性.暴击伤害加成(0.20)
-        属性.百分比力智加成(0.12)
+        属性.力量 += 30
+        属性.智力 += 30
+        属性.暴击伤害加成(0.15)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +160<br>'
-        temp += '智力 +160<br>'
-        temp += '所有属性强化 +25<br>'
-        temp += 'Lv1-80 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        temp += '暴击伤害 +20%<br>'
-        temp += '百分比力智 +12%<br>'
+        temp += 'Strength +30<br>'
+        temp += 'Intelligence +30<br>'
+        temp += 'Critical Damage +15%<br>'
         return temp
-
+    
 
 class 宠物15(Item):
-    显示名称 = '(21)普通·骑士/精灵使'
-    名称 = '骑士/精灵使'
+    显示名称 = 'PMI Pet'
+    名称 = 'Light Shooter Victoria'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 150
-        属性.智力 += 150
-        属性.所有属性强化加成(25)
-        属性.技能等级加成('所有', 1, 80, 1)
-        属性.加算冷却缩减 += 0.05
-        属性.百分比三攻加成(0.12)
-        属性.附加伤害加成(0.10)
+        属性.力量 += 75
+        属性.智力 += 75
+        属性.所有属性强化加成(10)
+        属性.技能等级加成('所有', 75, 75, 1)
+        属性.百分比三攻加成(0.18)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +150<br>'
-        temp += '智力 +150<br>'
-        temp += '所有属性强化 +25<br>'
-        temp += 'Lv1-80 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        temp += '百分比三攻 +12%<br>'
-        temp += '附加伤害 +10%<br>'
+        temp += 'Strength +75<br>'
+        temp += 'Intelligence +75<br>'
+        temp += 'All Ele +10<br>'
+        temp += 'Lv75 Passive Skill +1<br>'
+        temp += 'Physical/Magical/Independent Atk +18%<br>'
         return temp
 
 
 class 宠物14(Item):
-    显示名称 = '(21)夏日之恋莱森德'
-    名称 = '夏日之恋莱森德'
+    显示名称 = 'TCO [Veteran]'
+    名称 = 'Circle the Solar Guardian'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 150
-        属性.智力 += 150
-        属性.所有属性强化加成(25)
-        属性.技能等级加成('所有', 1, 80, 1)
-        属性.加算冷却缩减 += 0.05
-        属性.百分比力智加成(0.10)
-        属性.附加伤害加成(0.12)
+        属性.力量 += 65
+        属性.智力 += 65
+        属性.技能等级加成('所有', 75, 75, 1)
+        属性.暴击伤害加成(0.18)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +150<br>'
-        temp += '智力 +150<br>'
-        temp += '所有属性强化 +25<br>'
-        temp += 'Lv1-80 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        temp += '百分比力智 +10%<br>'
-        temp += '附加伤害 +12%<br>'
+        temp += 'Strength +65<br>'
+        temp += 'Intelligence +65<br>'
+        temp += 'Lv75 Passive Skill +1<br>'
+        temp += 'Critical Damage +18%<br>'
         return temp
 
 
 class 宠物13(Item):
-    显示名称 = '(21)夏日之恋赫米雅'
-    名称 = '夏日之恋赫米雅'
+    显示名称 = 'TCO [Trained]'
+    名称 = 'Circle the Solar Guardian'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 150
-        属性.智力 += 150
-        属性.所有属性强化加成(25)
-        属性.技能等级加成('所有', 1, 80, 1)
-        属性.加算冷却缩减 += 0.05
-        属性.百分比力智加成(0.12)
-        属性.附加伤害加成(0.10)
+        属性.力量 += 65
+        属性.智力 += 65
+        属性.所有属性强化加成(20)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +150<br>'
-        temp += '智力 +150<br>'
-        temp += '所有属性强化 +25<br>'
-        temp += 'Lv1-80 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        temp += '百分比力智 +12%<br>'
-        temp += '附加伤害 +10%<br>'
+        temp += 'Strength +65<br>'
+        temp += 'Intelligence +65<br>'
+        temp += 'All Ele +20<br>'
         return temp
 
 
 class 宠物12(Item):
-    显示名称 = '(21)比拉谢尔号'
-    名称 = '比拉谢尔号'
+    显示名称 = 'TCO [Normal]'
+    名称 = 'Circle the Solar Guardian'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 140
-        属性.智力 += 140
-        属性.所有属性强化加成(24)
-        属性.技能等级加成('所有', 1, 50, 1)
-        属性.加算冷却缩减 += 0.05
-        属性.附加伤害加成(0.12)
-        属性.百分比力智加成(0.10)
-
+        属性.力量 += 65
+        属性.智力 += 65
+        属性.物理攻击力 += 80
+        属性.魔法攻击力 += 80
+        属性.独立攻击力 += 80
+        
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +140<br>'
-        temp += '智力 +140<br>'
-        temp += '所有属性强化 +24<br>'
-        temp += 'Lv1-50 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        temp += '附加伤害 +12%<br>'
-        temp += '百分比力智 +10%<br>'
+        temp += 'Strength +65<br>'
+        temp += 'Intelligence +65<br>'
+        temp += 'Physical Atk +80<br>'
+        temp += 'Magical Atk +80<br>'
+        temp += 'Independent Atk +80<br>'
         return temp
 
 
 class 宠物11(Item):
-    显示名称 = '(20)至尊·暴风圣女'
-    名称 = '暴风圣女'
+    显示名称 = 'Puppet Theater Pet'
+    名称 = 'Petite Barbie'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 150
-        属性.智力 += 150
-        属性.所有属性强化加成(24)
-        属性.附加伤害加成(0.15)
-        属性.技能等级加成('所有', 1, 50, 1)
-        属性.加算冷却缩减 += 0.05
-        属性.最终伤害加成(0.05)
-        属性.百分比力智加成(0.12)
+        属性.力量 += 75
+        属性.智力 += 75
+        属性.所有属性强化加成(25)
+        属性.技能等级加成('所有', 50, 50, 1)
+        属性.技能等级加成('所有', 85, 85, 1)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +150<br>'
-        temp += '智力 +150<br>'
-        temp += '所有属性强化 +24<br>'
-        temp += '附加伤害 +15%<br>'
-        temp += 'Lv1-50 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        temp += '最终伤害 +5%<br>'
-        temp += '百分比力智 +12%<br>'
+        temp += 'Strength +75<br>'
+        temp += 'Intelligence +75<br>'
+        temp += 'All Ele +25<br>'
+        temp += 'Lv50 Active Skill +1<br>'
+        temp += 'Lv85 Active Skill +1<br>'
         return temp
 
 
 class 宠物10(Item):
-    显示名称 = '(19)至尊·神迹·莱恩'
-    名称 = '神迹·莱恩'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 120
-        属性.智力 += 120
-        属性.所有属性强化加成(24)
-        属性.附加伤害加成(0.15)
-        属性.技能等级加成('所有', 1, 50, 1)
-        属性.加算冷却缩减 += 0.05
-        属性.最终伤害加成(0.05)
-        属性.百分比力智加成(0.08)
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +120<br>'
-        temp += '智力 +120<br>'
-        temp += '所有属性强化 +24<br>'
-        temp += '附加伤害 +15%<br>'
-        temp += 'Lv1-50 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        temp += '最终伤害 +5%<br>'
-        temp += '百分比力智 +8%<br>'
-        return temp
-
-
-class 宠物9(Item):
-    显示名称 = '(20)普通·神官'
-    名称 = '神官格洛丽亚'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 140
-        属性.智力 += 140
-        属性.所有属性强化加成(24)
-        属性.附加伤害加成(0.12)
-        属性.技能等级加成('所有', 1, 50, 1)
-        属性.加算冷却缩减 += 0.05
-        属性.百分比力智加成(0.10)
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +140<br>'
-        temp += '智力 +140<br>'
-        temp += '所有属性强化 +24<br>'
-        temp += '附加伤害 +12%<br>'
-        temp += 'Lv1-50 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        temp += '百分比力智 +10%<br>'
-        return temp
-
-
-class 宠物8(Item):
-    显示名称 = '(19)至尊·莱恩'
-    名称 = '古国英豪莱恩'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 120
-        属性.智力 += 120
-        属性.所有属性强化加成(24)
-        属性.附加伤害加成(0.15)
-        属性.技能等级加成('所有', 1, 50, 1)
-        属性.加算冷却缩减 += 0.05
-        属性.最终伤害加成(0.05)
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +120<br>'
-        temp += '智力 +120<br>'
-        temp += '所有属性强化 +24<br>'
-        temp += '附加伤害 +15%<br>'
-        temp += 'Lv1-50 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        temp += '最终伤害 +5%<br>'
-        return temp
-
-
-class 宠物7(Item):
-    显示名称 = '(19)普通·莱恩'
-    名称 = '骑士莱恩'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 120
-        属性.智力 += 120
-        属性.所有属性强化加成(24)
-        属性.附加伤害加成(0.12)
-        属性.技能等级加成('所有', 1, 50, 1)
-        属性.加算冷却缩减 += 0.05
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +120<br>'
-        temp += '智力 +120<br>'
-        temp += '所有属性强化 +24<br>'
-        temp += '附加伤害 +12%<br>'
-        temp += 'Lv1-50 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        return temp
-
-
-class 宠物6(Item):
-    显示名称 = '(18)至尊·蒂娅'
-    名称 = '冰雪魔法师蒂娅'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 110
-        属性.智力 += 110
-        属性.所有属性强化加成(22)
-        属性.附加伤害加成(0.12)
-        属性.技能等级加成('所有', 1, 50, 1)
-        属性.加算冷却缩减 += 0.05
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +110<br>'
-        temp += '智力 +110<br>'
-        temp += '所有属性强化 +22<br>'
-        temp += '附加伤害 +12%<br>'
-        temp += 'Lv1-50 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        return temp
-
-
-class 宠物5(Item):
-    显示名称 = '(18)普通·蒂娅'
-    名称 = '雪兔蒂娅'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 100
-        属性.智力 += 100
-        属性.所有属性强化加成(20)
-        属性.附加伤害加成(0.10)
-        属性.技能等级加成('所有', 1, 50, 1)
-        属性.加算冷却缩减 += 0.05
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +100<br>'
-        temp += '智力 +100<br>'
-        temp += '所有属性强化 +20<br>'
-        temp += '附加伤害 +10%<br>'
-        temp += 'Lv1-50 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        return temp
-
-
-class 宠物4(Item):
-    显示名称 = '(17)克里斯'
-    名称 = '克里斯'
-
-    def 城镇属性(self, 属性):
-        属性.物理攻击力 += 35
-        属性.魔法攻击力 += 35
-        属性.独立攻击力 += 55
-        属性.所有属性强化加成(15)
-        属性.附加伤害加成(0.08)
-        属性.技能等级加成('所有', 1, 50, 1)
-        属性.加算冷却缩减 += 0.05
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '物理攻击力 +35<br>'
-        temp += '魔法攻击力 +35<br>'
-        temp += '独立攻击力 +55<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '附加伤害 +8%<br>'
-        temp += 'Lv1-50 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        return temp
-
-
-class 宠物3(Item):
-    显示名称 = '(16)关羽'
-    名称 = '关羽'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 50
-        属性.智力 += 50
-        属性.所有属性强化加成(15)
-        属性.附加伤害加成(0.05)
-        属性.技能等级加成('所有', 1, 50, 1)
-        属性.加算冷却缩减 += 0.05
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +50<br>'
-        temp += '智力 +50<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '附加伤害 +5%<br>'
-        temp += 'Lv1-50 技能等级+1<br>'
-        temp += '技能冷却 -5%(加算)<br>'
-        return temp
-
-
-class 宠物2(Item):
-    显示名称 = '(15)墨仙雪莲'
-    名称 = '墨仙雪莲'
+    显示名称 = 'SD Snow White Tagor'
+    名称 = 'SD Tagor'
 
     def 城镇属性(self, 属性):
         属性.力量 += 45
         属性.智力 += 45
-        属性.物理攻击力 += 25
-        属性.魔法攻击力 += 25
-        属性.独立攻击力 += 45
-        属性.附加伤害加成(0.08)
-        属性.技能等级加成('所有', 1, 50, 1)
+        属性.最终伤害加成(0.10)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +45<br>'
-        temp += '智力 +45<br>'
-        temp += '物理攻击力 +25<br>'
-        temp += '魔法攻击力 +25<br>'
-        temp += '独立攻击力 +45<br>'
-        temp += '附加伤害 +8%<br>'
-        temp += 'Lv1-50 技能等级+1<br>'
+        temp += 'Strength +45<br>'
+        temp += 'Intelligence +45<br>'
+        temp += 'All.Atk +10%<br>'
         return temp
 
 
-class 宠物1(Item):
-    显示名称 = '心悦宠物'
-    名称 = '心悦宠物'
+class 宠物9(Item):
+    显示名称 = 'Aeterna [No-Upgrade]'
+    名称 = 'Aeterna Pet'
+
+    def 城镇属性(self, 属性):
+        属性.力量 += 80
+        属性.智力 += 80
+        属性.所有属性强化加成(15)
+        属性.最终伤害加成(0.10)
+        
+    def 装备描述(self, 属性):
+        temp = ''
+        temp += 'Strength +80<br>'
+        temp += 'Intelligence +80<br>'
+        temp += 'All Ele +15<br>'
+        temp += 'All.Atk +10%<br>'
+        return temp
+
+class 宠物8(Item):
+    显示名称 = 'Aeterna [Upgrade]'
+    名称 = 'Aeterna Pet'
+
+    def 城镇属性(self, 属性):
+        属性.力量 += 80
+        属性.智力 += 80
+        属性.所有属性强化加成(15)
+        属性.最终伤害加成(0.10)
+        
+    def 装备描述(self, 属性):
+        temp = ''
+        temp += 'Strength +80<br>'
+        temp += 'Intelligence +80<br>'
+        temp += 'All Ele +15<br>'
+        temp += 'All.Atk +10%<br>'
+        temp += 'Increase Character Atk by +10%<br>'
+        temp += '(NEED TO CHECK PET SWAP 10% 2nd Tab)<br>'
+        return temp
+
+class 宠物7(Item):
+    显示名称 = 'Masamune [KAI]'
+    名称 = 'Ninja KAI'
+
+    def 城镇属性(self, 属性):
+        属性.最终伤害加成(0.15)
+
+    def 装备描述(self, 属性):
+        temp = ''
+        temp += 'All.Atk +15%<br>'
+        return temp
+
+
+class 宠物6(Item):
+    显示名称 = 'Petite School Friends'
+    名称 = 'Petite Friends'
 
     def 城镇属性(self, 属性):
         属性.力量 += 100
         属性.智力 += 100
-        属性.所有属性强化加成(20)
-        属性.附加伤害加成(0.05)
-        属性.技能等级加成('所有', 1, 50, 1)
+        属性.技能等级加成('所有', 75, 75, 1)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +100<br>'
-        temp += '智力 +100<br>'
-        temp += '所有属性强化 +20<br>'
-        temp += '附加伤害 +5%<br>'
-        temp += 'Lv1-50 技能等级+1<br>'
+        temp += 'Strength +100<br>'
+        temp += 'Intelligence +100<br>'
+        temp += 'Lv75 Passive Skill +1<br>'
+        return temp
+
+
+class 宠物5(Item):
+    显示名称 = 'Valhalla Creature'
+    名称 = 'SD Valkyrie'
+
+    def 城镇属性(self, 属性):
+        属性.力量 += 55
+        属性.智力 += 55
+        属性.附加伤害加成(0.05)
+
+    def 装备描述(self, 属性):
+        temp = ''
+        temp += 'Strength +55<br>'
+        temp += 'Intelligence +55<br>'
+        temp += 'Bonus Damage +5%<br>'
+        temp += 'Increase Character Atk by +10%<br>'
+        temp += '(NEED TO CHECK PET SWAP 10% 2nd Tab)<br>'
+        return temp
+
+
+class 宠物4(Item):
+    显示名称 = 'Far Eastern Romance'
+    名称 = 'Runa the Traveler'
+
+    def 城镇属性(self, 属性):
+        属性.力量 += 60
+        属性.智力 += 60
+        属性.物理攻击力 += 30
+        属性.魔法攻击力 += 30
+        属性.独立攻击力 += 30
+        属性.附加伤害加成(0.05)
+        属性.技能等级加成('所有', 1, 45, 1)
+
+    def 装备描述(self, 属性):
+        temp = ''
+        temp += 'Strength +60<br>'
+        temp += 'Intelligence +60<br>'
+        temp += 'Physical Atk +30<br>'
+        temp += 'Magical Atk +30<br>'
+        temp += 'Independent Atk +30<br>'
+        temp += 'Bonus.Dmg 5%<br>'
+        temp += 'Lv 1-45 All Skill +1<br>'
+        return temp
+
+
+class 宠物3(Item):
+    显示名称 = 'SD Elonse [Tenacious]'
+    名称 = 'SD Elonse'
+
+    def 城镇属性(self, 属性):
+        属性.力量 += 65
+        属性.智力 += 65
+        属性.最终伤害加成(0.15)
+
+    def 装备描述(self, 属性):
+        temp = ''
+        temp += 'Strength +65<br>'
+        temp += 'Intelligence +65<br>'
+        temp += 'All.Atk +15%<br>'
+        return temp
+
+
+class 宠物2(Item):
+    显示名称 = 'SD Elonse [Brave]'
+    名称 = 'SD Elonse'
+
+    def 城镇属性(self, 属性):
+        属性.力量 += 50
+        属性.智力 += 50
+        属性.所有属性强化加成(20)
+
+    def 装备描述(self, 属性):
+        temp = ''
+        temp += 'Strength +50<br>'
+        temp += 'Intelligence +50<br>'
+        temp += 'All Ele +20<br>'
+        return temp
+
+
+class 宠物1(Item):
+    显示名称 = 'SD Elonse & Alonse'
+    名称 = 'Elonse & Alonse'
+
+    def 城镇属性(self, 属性):
+        属性.力量 += 65
+        属性.智力 += 65
+        属性.最终伤害加成(0.15)
+
+    def 装备描述(self, 属性):
+        temp = ''
+        temp += 'Strength +65<br>'
+        temp += 'Intelligence +65<br>'
+        temp += 'All.Atk +15%<br>'
+        temp += 'Increase Character Atk by +10%<br>'
+        temp += '(NEED TO CHECK PET SWAP 10% 2nd Tab)<br>'
         return temp
 
 
 class 宠物0(Item):
-    显示名称 = '无'
-    名称 = '无'
+    显示名称 = 'None'
+    名称 = 'None'
 
     def 城镇属性(self, 属性):
         pass
