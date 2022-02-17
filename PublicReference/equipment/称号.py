@@ -3,932 +3,560 @@ from PublicReference.equipment.base_item import Item
 
 # 称号属性部分
 
-称号列表 = [None] * 33
-
-
-class 称号32(Item):
-    显示名称 = '(22)至尊·时空超越者'
-    名称 = '时空超越者'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 120
-        属性.智力 += 120
-        属性.物理攻击力 += 70
-        属性.魔法攻击力 += 70
-        属性.独立攻击力 += 70
-        属性.所有属性强化加成(25)
-        属性.百分比三攻加成(0.05)
-        属性.暴击伤害加成(0.05)
-        属性.最终伤害加成(0.05)
-        属性.百分比力智加成(0.05)
-        属性.附加伤害加成(0.05)
-
-    def 触发属性(self, 属性):
-        属性.进图力量 += 35
-        属性.进图智力 += 35
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +120<br>'
-        temp += '智力 +120<br>'
-        temp += '物理攻击力 +70<br>'
-        temp += '魔法攻击力 +70<br>'
-        temp += '独立攻击力 +70<br>'
-        temp += '所有属性强化 +25<br>'
-        temp += '百分比三攻 +5%<br>'
-        temp += '暴追 +5%<br>'
-        temp += '最终伤害 +5%<br>'
-        temp += '力智 +5%<br>'
-        temp += '附加伤害 +5%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
-        return temp
-
-
-class 称号31(Item):
-    显示名称 = '(22)普通·时空旅人'
-    名称 = '时空旅人'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 100
-        属性.智力 += 100
-        属性.物理攻击力 += 65
-        属性.魔法攻击力 += 65
-        属性.独立攻击力 += 65
-        属性.所有属性强化加成(20)
-        属性.伤害增加加成(0.06)
-        属性.暴击伤害加成(0.06)
-        属性.百分比力智加成(0.06)
-
-    def 触发属性(self, 属性):
-        属性.进图力量 += 35
-        属性.进图智力 += 35
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +100<br>'
-        temp += '智力 +100<br>'
-        temp += '物理攻击力 +65<br>'
-        temp += '魔法攻击力 +65<br>'
-        temp += '独立攻击力 +65<br>'
-        temp += '所有属性强化 +20<br>'
-        temp += '黄追 +6%<br>'
-        temp += '暴追 +6%<br>'
-        temp += '力智 +6%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
-        return temp
-
-
-class 称号30(Item):
-    显示名称 = '(21)至尊·穿越星空的祈愿'
-    名称 = '穿越星空的祈愿'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 100
-        属性.智力 += 100
-        属性.物理攻击力 += 65
-        属性.魔法攻击力 += 65
-        属性.独立攻击力 += 65
-        属性.所有属性强化加成(22)
-        属性.百分比三攻加成(0.12)
-        属性.附加伤害加成(0.10)
-
-    def 触发属性(self, 属性):
-        属性.进图力量 += 35
-        属性.进图智力 += 35
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +100<br>'
-        temp += '智力 +100<br>'
-        temp += '物理攻击力 +65<br>'
-        temp += '魔法攻击力 +65<br>'
-        temp += '独立攻击力 +65<br>'
-        temp += '所有属性强化 +22<br>'
-        temp += '百分比三攻 +12%<br>'
-        temp += '附加伤害 +10%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
-        return temp
-
-
-class 称号29(Item):
-    显示名称 = '(21)普通·永恒追猎'
-    名称 = '永恒追猎'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 80
-        属性.智力 += 80
-        属性.物理攻击力 += 60
-        属性.魔法攻击力 += 60
-        属性.独立攻击力 += 60
-        属性.所有属性强化加成(15)
-        属性.伤害增加加成(0.15)
-
-    def 触发属性(self, 属性):
-        属性.进图力量 += 35
-        属性.进图智力 += 35
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +80<br>'
-        temp += '智力 +80<br>'
-        temp += '物理攻击力 +60<br>'
-        temp += '魔法攻击力 +60<br>'
-        temp += '独立攻击力 +60<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '伤害增加 +15%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
-        return temp
-
-
-class 称号28(Item):
-    显示名称 = '(21)普通·永恒判罪'
-    名称 = '永恒判罪'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 80
-        属性.智力 += 80
-        属性.物理攻击力 += 60
-        属性.魔法攻击力 += 60
-        属性.独立攻击力 += 60
-        属性.所有属性强化加成(15)
-        属性.暴击伤害加成(0.15)
-
-    def 触发属性(self, 属性):
-        属性.进图力量 += 35
-        属性.进图智力 += 35
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +80<br>'
-        temp += '智力 +80<br>'
-        temp += '物理攻击力 +60<br>'
-        temp += '魔法攻击力 +60<br>'
-        temp += '独立攻击力 +60<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '暴击伤害 +15%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
-        return temp
-
-
-class 称号27(Item):
-    显示名称 = '(21)普通·永恒战吼'
-    名称 = '永恒战吼'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 80
-        属性.智力 += 80
-        属性.物理攻击力 += 60
-        属性.魔法攻击力 += 60
-        属性.独立攻击力 += 60
-        属性.所有属性强化加成(15)
-        属性.百分比力智加成(0.15)
-
-    def 触发属性(self, 属性):
-        属性.进图力量 += 35
-        属性.进图智力 += 35
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +80<br>'
-        temp += '智力 +80<br>'
-        temp += '物理攻击力 +60<br>'
-        temp += '魔法攻击力 +60<br>'
-        temp += '独立攻击力 +60<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '百分比力智 +15%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
-        return temp
-
-
-class 称号26(Item):
-    显示名称 = '(21)国庆·信念之启示'
-    名称 = '信念之启示'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 60
-        属性.智力 += 60
-        属性.所有属性强化加成(15)
-        属性.伤害增加加成(0.15)
-
-    def 触发属性(self, 属性):
-        属性.进图属强 += 10
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +60<br>'
-        temp += '智力 +60<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '黄字 +15%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '所有属强 +10<br>'
-        return temp
+称号列表 = [None] * 26
 
 
 class 称号25(Item):
-    显示名称 = '(21)国庆·隐忍之启示'
-    名称 = '隐忍之启示'
+    显示名称 = 'Midsummer Lv 80'
+    名称 = 'Midsummer Lv 80'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 60
-        属性.智力 += 60
-        属性.所有属性强化加成(15)
-        属性.暴击伤害加成(0.15)
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.伤害增加加成 (0.15)
+        属性.技能倍率加成(80, 0.10)
 
     def 触发属性(self, 属性):
-        属性.进图属强 += 10
+        属性.进图力量 += 25
+        属性.进图智力 += 25
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +60<br>'
-        temp += '智力 +60<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '暴伤 +15%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '所有属强 +10<br>'
+        temp += 'Strength +40<br>'
+        temp += 'Intelligence +40<br>'
+        temp += 'Atk.Dmg +15%<br>'
+        temp += 'Lv 80 Skill Atk 10%<br>'
+        temp += '<font color="#00A2E8">Chance Option:</font><br>'
+        temp += 'STR +25<br>'
+        temp += 'Intelligence +25<br>'
         return temp
 
 
 class 称号24(Item):
-    显示名称 = '(21)国庆·勇气之启示'
-    名称 = '勇气之启示'
+    显示名称 = 'Midsummer Lv 75'
+    名称 = 'Midsummer Lv 75'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 60
-        属性.智力 += 60
-        属性.所有属性强化加成(15)
-        属性.百分比三攻加成(0.15)
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.伤害增加加成 (0.15)
+        属性.技能倍率加成(75, 0.10)
 
     def 触发属性(self, 属性):
-        属性.进图属强 += 10
+        属性.进图力量 += 25
+        属性.进图智力 += 25
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +60<br>'
-        temp += '智力 +60<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '百分比三攻 +15%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '所有属强 +10<br>'
+        temp += 'Strength +40<br>'
+        temp += 'Intelligence +40<br>'
+        temp += 'Attack Damage +15%<br>'
+        temp += 'Lv.75 Skill Atk 10%<br>'
+        temp += '<font color="#00A2E8">Chance Option:</font><br>'
+        temp += 'Strength +25<br>'
+        temp += 'Intelligence +25<br>'
         return temp
 
 
 class 称号23(Item):
-    显示名称 = '(21)国庆·希望之启示'
-    名称 = '希望之启示'
+    显示名称 = 'Midsummer Lv 70'
+    名称 = 'Midsummer Lv 70'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 60
-        属性.智力 += 60
-        属性.所有属性强化加成(15)
-        属性.最终伤害加成(0.15)
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.伤害增加加成 (0.15)
+        属性.技能倍率加成(70, 0.10)
 
     def 触发属性(self, 属性):
-        属性.进图属强 += 10
+        属性.进图力量 += 25
+        属性.进图智力 += 25
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +60<br>'
-        temp += '智力 +60<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '最终伤害 +15%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '所有属强 +10<br>'
+        temp += 'Strength +40<br>'
+        temp += 'Intelligence +40<br>'
+        temp += 'Attack Damage +15%<br>'
+        temp += 'Lv.70 Skill Atk 10%<br>'
+        temp += '<font color="#00A2E8">Chance Option:</font><br>'
+        temp += 'Strength +25<br>'
+        temp += 'Intelligence +25<br>'
         return temp
 
 
 class 称号22(Item):
-    显示名称 = '(20)至尊·伟大的意志'
-    名称 = '伟大的意志'
+    显示名称 = 'Midsummer Lv 45'
+    名称 = 'Midsummer Lv 45'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 90
-        属性.智力 += 90
-        属性.物理攻击力 += 65
-        属性.魔法攻击力 += 65
-        属性.独立攻击力 += 65
-        属性.所有属性强化加成(20)
-        属性.暴击伤害加成(0.18)
-        属性.百分比力智加成(0.04)
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.伤害增加加成 (0.15)
+        属性.技能倍率加成(45, 0.10)
 
     def 触发属性(self, 属性):
-        属性.进图力量 += 35
-        属性.进图智力 += 35
+        属性.进图力量 += 25
+        属性.进图智力 += 25
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +90<br>'
-        temp += '智力 +90<br>'
-        temp += '物理攻击力 +65<br>'
-        temp += '魔法攻击力 +65<br>'
-        temp += '独立攻击力 +65<br>'
-        temp += '所有属性强化 +20<br>'
-        temp += '暴击伤害 +18%<br>'
-        temp += '百分比力智 +4%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
+        temp += 'Strength +40<br>'
+        temp += 'Intelligence +40<br>'
+        temp += 'Attack Damage +15%<br>'
+        temp += 'Lv.45 Skill Atk 10%<br>'
+        temp += '<font color="#00A2E8">Chance Option:</font><br>'
+        temp += 'Strength +25<br>'
+        temp += 'Intelligence +25<br>'
         return temp
 
 
 class 称号21(Item):
-    显示名称 = '(20)普通·使徒降临'
-    名称 = '使徒降临'
+    显示名称 = 'Midsummer Lv 40'
+    名称 = 'Midsummer Lv 40'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 80
-        属性.智力 += 80
-        属性.物理攻击力 += 60
-        属性.魔法攻击力 += 60
-        属性.独立攻击力 += 60
-        属性.所有属性强化加成(15)
-        属性.附加伤害加成(0.12)
-        属性.百分比力智加成(0.03)
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.伤害增加加成 (0.15)
+        属性.技能倍率加成(40, 0.10)
 
     def 触发属性(self, 属性):
-        属性.进图力量 += 35
-        属性.进图智力 += 35
+        属性.进图力量 += 25
+        属性.进图智力 += 25
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +80<br>'
-        temp += '智力 +80<br>'
-        temp += '物理攻击力 +60<br>'
-        temp += '魔法攻击力 +60<br>'
-        temp += '独立攻击力 +60<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '附加伤害 +12%<br>'
-        temp += '百分比力智 +3%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
+        temp += 'Strength +40<br>'
+        temp += 'Intelligence +40<br>'
+        temp += 'Attack Damage +15%<br>'
+        temp += 'Lv.40 Skill Atk 10%<br>'
+        temp += '<font color="#00A2E8">Chance Option:</font><br>'
+        temp += 'Strength +25<br>'
+        temp += 'Intelligence +25<br>'
         return temp
 
 
 class 称号20(Item):
-    显示名称 = '(20)国庆·安徒恩的烈焰'
-    名称 = '安徒恩的烈焰'
+    显示名称 = 'Midsummer Lv 35'
+    名称 = 'Midsummer Lv 35'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 60
-        属性.智力 += 60
-        属性.所有属性强化加成(15)
-        属性.黄字 = max(属性.黄字, 0.15)
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.伤害增加加成 (0.15)
+        属性.技能倍率加成(35, 0.10)
 
     def 触发属性(self, 属性):
-        属性.进图属强 += 10
+        属性.进图力量 += 25
+        属性.进图智力 += 25
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +60<br>'
-        temp += '智力 +60<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '黄字 +15%（取最高值）<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '所有属强 +10<br>'
+        temp += 'Strength +40<br>'
+        temp += 'Intelligence +40<br>'
+        temp += 'Attack Damage +15%<br>'
+        temp += 'Lv.35 Skill Atk 10%<br>'
+        temp += '<font color="#00A2E8">Chance Option:</font><br>'
+        temp += 'Strength +25<br>'
+        temp += 'Intelligence +25<br>'
         return temp
 
 
 class 称号19(Item):
-    显示名称 = '(20)国庆·卢克的创造'
-    名称 = '卢克的创造'
+    显示名称 = 'Midsummer Lv 30'
+    名称 = 'Midsummer Lv 30'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 60
-        属性.智力 += 60
-        属性.所有属性强化加成(15)
-        属性.暴伤 = max(属性.暴伤, 0.15)
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.伤害增加加成 (0.15)
+        属性.技能倍率加成(30, 0.15)
 
     def 触发属性(self, 属性):
-        属性.进图属强 += 10
+        属性.进图力量 += 25
+        属性.进图智力 += 25
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +60<br>'
-        temp += '智力 +60<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '暴伤 +15%（取最高值）<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '所有属强 +10<br>'
+        temp += 'Strength +40<br>'
+        temp += 'Intelligence +40<br>'
+        temp += 'Attack Damage +15%<br>'
+        temp += 'Lv.30 Skill Atk 15%<br>'
+        temp += '<font color="#00A2E8">Chance Option:</font><br>'
+        temp += 'Strength +25<br>'
+        temp += 'Intelligence +25<br>'
         return temp
 
 
 class 称号18(Item):
-    显示名称 = '(20)国庆·伊希斯的天空'
-    名称 = '伊希斯的天空'
+    显示名称 = 'A Midsummer Night'
+    名称 = 'A Midsummer Night'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 60
-        属性.智力 += 60
-        属性.所有属性强化加成(15)
-        属性.百分比三攻加成(0.15)
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.伤害增加加成 (0.15)
 
     def 触发属性(self, 属性):
-        属性.进图属强 += 10
+        属性.进图力量 += 25
+        属性.进图智力 += 25
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +60<br>'
-        temp += '智力 +60<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '百分比三攻 +15%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '所有属强 +10<br>'
+        temp += 'Strength +40<br>'
+        temp += 'Intelligence +40<br>'
+        temp += 'Attack Damage +15%<br>'
+        temp += '<font color="#00A2E8">Chance Option:</font><br>'
+        temp += 'Strength +25<br>'
+        temp += 'Intelligence +25<br>'
         return temp
-
-
+    
+    
 class 称号17(Item):
-    显示名称 = '(20)国庆·希洛克的悲鸣'
-    名称 = '希洛克的悲鸣'
+    显示名称 = 'Monster Cosplay'
+    名称 = 'Bearer of Destiny'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 60
-        属性.智力 += 60
-        属性.所有属性强化加成(15)
-        属性.最终伤害加成(0.15)
-
-    def 触发属性(self, 属性):
-        属性.进图属强 += 10
+        属性.力量 += 45
+        属性.智力 += 45
+        属性.伤害增加加成 (0.15)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +60<br>'
-        temp += '智力 +60<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '最终伤害 +15%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '所有属强 +10<br>'
+        temp += 'Strength +45<br>'
+        temp += 'Intelligence +45<br>'
+        temp += 'Attack Damage +15%<br>'
         return temp
 
 
 class 称号16(Item):
-    显示名称 = '(19)至尊·神选之英杰'
-    名称 = '神选之英杰'
+    显示名称 = 'Serene Dawn'
+    名称 = 'Serene Dawn'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 75
-        属性.智力 += 75
-        属性.物理攻击力 += 45
-        属性.魔法攻击力 += 45
-        属性.独立攻击力 += 65
-        属性.所有属性强化加成(20)
-        属性.暴击伤害加成(0.18)
-
-    def 触发属性(self, 属性):
-        属性.进图力量 += 35
-        属性.进图智力 += 35
+        属性.力量 += 100
+        属性.智力 += 100
+        属性.物理攻击力 += 100
+        属性.魔法攻击力 += 100
+        属性.独立攻击力 += 100
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +75<br>'
-        temp += '智力 +75<br>'
-        temp += '物理攻击力 +45<br>'
-        temp += '魔法攻击力 +45<br>'
-        temp += '独立攻击力 +65<br>'
-        temp += '所有属性强化 +20<br>'
-        temp += '暴击伤害 +18%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
+        temp += 'Strength +100<br>'
+        temp += 'Intelligence +100<br>'
+        temp += 'Physical Atk +100<br>'
+        temp += 'Magical Atk +100<br>'
+        temp += 'Independent Atk +100<br>'
         return temp
 
 
 class 称号15(Item):
-    显示名称 = '(19)普通·秘境迷踪'
-    名称 = '秘境迷踪'
+    显示名称 = 'Warm Morning'
+    名称 = 'Warm Morning'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 70
-        属性.智力 += 70
-        属性.物理攻击力 += 40
-        属性.魔法攻击力 += 40
-        属性.独立攻击力 += 60
-        属性.所有属性强化加成(15)
-        属性.附加伤害加成(0.10)
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.所有属性强化加成(30)
 
     def 触发属性(self, 属性):
-        属性.进图力量 += 35
-        属性.进图智力 += 35
+        属性.进图力量 += 25
+        属性.进图智力 += 25
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +70<br>'
-        temp += '智力 +70<br>'
-        temp += '物理攻击力 +40<br>'
-        temp += '魔法攻击力 +40<br>'
-        temp += '独立攻击力 +60<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '附加伤害 +10%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
+        temp += 'Strength +40<br>'
+        temp += 'Intelligence +40<br>'
+        temp += 'All Ele +30<br>'
+        temp += '<font color="#00A2E8">Chance Option:</font><br>'
+        temp += 'Strength +25<br>'
+        temp += 'Intelligence +25<br>'
         return temp
 
 
 class 称号14(Item):
-    显示名称 = '(19)国庆·超越极限者'
-    名称 = '超越极限者'
+    显示名称 = 'Theather Puppet'
+    名称 = 'Theater Puppet'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 60
-        属性.智力 += 60
-        属性.所有属性强化加成(15)
-        属性.暴伤 = max(属性.暴伤, 0.15)
-
-    def 触发属性(self, 属性):
-        属性.进图属强 += 10
+        属性.力量 += 100
+        属性.智力 += 100
+        属性.伤害增加加成 (0.10)
+        属性.技能等级加成('所有', 50, 50, 1)
+        属性.技能等级加成('所有', 85, 85, 1)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +60<br>'
-        temp += '智力 +60<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '暴伤 +15%（取最高值）<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '所有属强 +10<br>'
+        temp += 'Strength +100<br>'
+        temp += 'Intelligence +100<br>'
+        temp += 'Attack Damage +10%<br>'
+        temp += 'Lv 50 Active Skill +1<br>'
+        temp += 'Lv 85 Active Skill +1<br>'
         return temp
 
 
 class 称号13(Item):
-    显示名称 = '(18)至尊·天选之人'
-    名称 = '天选之人'
+    显示名称 = 'Aeterna'
+    名称 = 'Aeterna Hunter'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 75
-        属性.智力 += 75
-        属性.物理攻击力 += 35
-        属性.魔法攻击力 += 35
-        属性.独立攻击力 += 55
-        属性.所有属性强化加成(20)
-        属性.最终伤害加成(0.12)
-
-    def 触发属性(self, 属性):
-        属性.进图力量 += 35
-        属性.进图智力 += 35
+        属性.力量 += 60
+        属性.智力 += 60
+        属性.物理攻击力 += 30
+        属性.魔法攻击力 += 30
+        属性.独立攻击力 += 30
+        属性.附加伤害加成(0.10)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +75<br>'
-        temp += '智力 +75<br>'
-        temp += '物理攻击力 +35<br>'
-        temp += '魔法攻击力 +35<br>'
-        temp += '独立攻击力 +55<br>'
-        temp += '所有属性强化 +20<br>'
-        temp += '最终伤害 +12%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
+        temp += 'Strength +60<br>'
+        temp += 'Intelligence +60<br>'
+        temp += 'Physical Atk +30<br>'
+        temp += 'Magical Atk +30<br>'
+        temp += 'Independent Atk +30<br>'
+        temp += 'Bonus Damage +10%<br>'
         return temp
 
 
 class 称号12(Item):
-    显示名称 = '(18)普通·兽人守护神'
-    名称 = '兽人守护神'
+    显示名称 = 'Welcome to Harlem [Return]'
+    名称 = 'Return of Harlem'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 70
-        属性.智力 += 70
-        属性.物理攻击力 += 30
-        属性.魔法攻击力 += 30
-        属性.独立攻击力 += 50
-        属性.所有属性强化加成(15)
-        属性.附加伤害加成(0.10)
-
-    def 触发属性(self, 属性):
-        属性.进图力量 += 35
-        属性.进图智力 += 35
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.所有属性强化加成(5)
+        属性.最终伤害加成(0.10)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +70<br>'
-        temp += '智力 +70<br>'
-        temp += '物理攻击力 +30<br>'
-        temp += '魔法攻击力 +30<br>'
-        temp += '独立攻击力 +50<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '附加伤害 +10%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
+        temp += 'Strength +60<br>'
+        temp += 'Intelligence +60<br>'
+        temp += 'All Ele +5<br>'
+        temp += 'All.Atk +10%<br>'
         return temp
 
 
 class 称号11(Item):
-    显示名称 = '(18)国庆·神之试炼'
-    名称 = '神之试炼'
+    显示名称 = 'Arad Pass S1'
+    名称 = 'Arad Pass S1'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 55
-        属性.智力 += 55
-        属性.所有属性强化加成(15)
-        属性.暴伤 = max(属性.暴伤, 0.15)
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.伤害增加加成 (0.15)
+        属性.所有属性强化加成(5)
 
     def 触发属性(self, 属性):
-        属性.进图属强 += 10
+        属性.进图力量 += 25
+        属性.进图智力 += 25
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +55<br>'
-        temp += '智力 +55<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '暴伤 +15%（取最高值）<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '所有属强 +10<br>'
+        temp += 'Strength +40<br>'
+        temp += 'Intelligence +40<br>'
+        temp += 'Attack Damage +15%<br>'
+        temp += 'All Ele +4<br>'
+        temp += '<font color="#00A2E8">Chance Option:</font><br>'
+        temp += 'Strength +25<br>'
+        temp += 'Intelligence +25<br>'
         return temp
-
+    
 
 class 称号10(Item):
-    显示名称 = '(17)至尊·龙之威仪'
-    名称 = '龙之威仪'
+    显示名称 = 'Awakened All in One'
+    名称 = 'All-in-One 2nd'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 65
-        属性.智力 += 65
-        属性.物理攻击力 += 35
-        属性.魔法攻击力 += 35
-        属性.独立攻击力 += 55
-        属性.所有属性强化加成(15)
-        属性.附加伤害加成(0.12)
-
-    def 触发属性(self, 属性):
-        属性.进图力量 += 35
-        属性.进图智力 += 35
+        属性.技能等级加成('主动', 15, 35, 2)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +65<br>'
-        temp += '智力 +65<br>'
-        temp += '物理攻击力 +35<br>'
-        temp += '魔法攻击力 +35<br>'
-        temp += '独立攻击力 +55<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '附加伤害 +12%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
+        temp += 'Lv 15-35 Active Skill +2<br>'
         return temp
 
 
 class 称号9(Item):
-    显示名称 = '(17)普通·龙之挑战'
-    名称 = '龙之挑战'
+    显示名称 = 'Ex: Doppelganger'
+    名称 = 'Ex: Doppelganger'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 60
-        属性.智力 += 60
-        属性.物理攻击力 += 30
-        属性.魔法攻击力 += 30
-        属性.独立攻击力 += 50
-        属性.所有属性强化加成(15)
-        属性.附加伤害加成(0.10)
-
-    def 触发属性(self, 属性):
-        属性.进图力量 += 35
-        属性.进图智力 += 35
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.所有属性强化加成(10)
+        属性.最终伤害加成(0.15)
+        属性.物理攻击力 += 20
+        属性.魔法攻击力 += 20
+        属性.独立攻击力 += 20
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +60<br>'
-        temp += '智力 +60<br>'
-        temp += '物理攻击力 +30<br>'
-        temp += '魔法攻击力 +30<br>'
-        temp += '独立攻击力 +50<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '附加伤害 +10%<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
+        temp += 'Strength +60<br>'
+        temp += 'Intelligence +60<br>'
+        temp += 'All Ele +10<br>'
+        temp += 'All.Atk +15%<br>'
+        temp += 'Physical Atk +20<br>'
+        temp += 'Magical Atk +20<br>'
+        temp += 'Independent Atk +20<br>'
         return temp
 
 
 class 称号8(Item):
-    显示名称 = '(17)国庆·海洋霸主'
-    名称 = '海洋霸主'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 55
-        属性.智力 += 55
-        属性.所有属性强化加成(15)
-        属性.黄字 = max(属性.黄字, 0.10)
-
-    def 触发属性(self, 属性):
-        属性.进图属强 += 10
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +55<br>'
-        temp += '智力 +55<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '黄字 +10%（取最高值）<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '所有属强 +10<br>'
-        return temp
-
-
-class 称号7(Item):
-    显示名称 = '(16)至尊·桃园结义[义]'
-    名称 = '桃园结义[义]'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 60
-        属性.智力 += 60
-        属性.物理攻击力 += 30
-        属性.魔法攻击力 += 30
-        属性.独立攻击力 += 50
-        属性.所有属性强化加成(15)
-        属性.黄字 = max(属性.黄字, 0.15)
-
-    def 触发属性(self, 属性):
-        属性.进图力量 += 35
-        属性.进图智力 += 35
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +60<br>'
-        temp += '智力 +60<br>'
-        temp += '物理攻击力 +30<br>'
-        temp += '魔法攻击力 +30<br>'
-        temp += '独立攻击力 +50<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '黄字 +15%（取最高值）<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
-        return temp
-
-
-class 称号6(Item):
-    显示名称 = '(16)普通·三英雄[义]'
-    名称 = '三英雄[义]'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 55
-        属性.智力 += 55
-        属性.物理攻击力 += 30
-        属性.魔法攻击力 += 30
-        属性.独立攻击力 += 50
-        属性.所有属性强化加成(15)
-        属性.黄字 = max(属性.黄字, 0.12)
-
-    def 触发属性(self, 属性):
-        属性.进图力量 += 35
-        属性.进图智力 += 35
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +55<br>'
-        temp += '智力 +55<br>'
-        temp += '物理攻击力 +30<br>'
-        temp += '魔法攻击力 +30<br>'
-        temp += '独立攻击力 +50<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '黄字 +12%（取最高值）<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
-        return temp
-
-
-class 称号5(Item):
-    显示名称 = '(16)国庆·骑士王的荣耀'
-    名称 = '骑士王的荣耀'
-
-    def 城镇属性(self, 属性):
-        属性.力量 += 55
-        属性.智力 += 55
-        属性.所有属性强化加成(15)
-        属性.黄字 = max(属性.黄字, 0.10)
-
-    def 触发属性(self, 属性):
-        属性.进图属强 += 10
-
-    def 装备描述(self, 属性):
-        temp = ''
-        temp += '力量 +55<br>'
-        temp += '智力 +55<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '黄字 +10%（取最高值）<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '所有属强 +10<br>'
-        return temp
-
-
-class 称号4(Item):
-    显示名称 = '(16)五一·荣耀贵族'
-    名称 = '荣耀贵族'
+    显示名称 = 'Limit Breaker'
+    名称 = 'Limit Breaker'
 
     def 城镇属性(self, 属性):
         属性.力量 += 30
         属性.智力 += 30
-        属性.物理攻击力 += 70
-        属性.魔法攻击力 += 70
-        属性.独立攻击力 += 90
-        属性.加算冷却缩减 += 0.10
-
-    def 触发属性(self, 属性):
-        pass
+        属性.最终伤害加成(0.10)
+        属性.技能等级加成('所有', 85, 85, 1)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +30<br>'
-        temp += '智力 +30<br>'
-        temp += '物理攻击力 +70<br>'
-        temp += '魔法攻击力 +70<br>'
-        temp += '独立攻击力 +90<br>'
-        temp += '技能冷却 -10%(加算)<br>'
+        temp += 'Strength +30<br>'
+        temp += 'Intelligence +30<br>'
+        temp += 'All.Atk +10%<br>'
+        temp += 'Lv.85 Active Skill +1<br>'
+        return temp
+
+
+class 称号7(Item):
+    显示名称 = 'Limit Contender'
+    名称 = 'Limit Contender'
+
+    def 城镇属性(self, 属性):
+        属性.力量 += 125
+        属性.智力 += 125
+        属性.技能等级加成('所有', 50, 50, 1)
+        属性.技能等级加成('所有', 85, 85, 1)
+
+    def 装备描述(self, 属性):
+        temp = ''
+        temp += 'Strength +125<br>'
+        temp += 'Intelligence +125<br>'
+        temp += 'Lv.50 Active Skill +1<br>'
+        temp += 'Lv.85 Active Skill +1<br>'
+        return temp
+
+
+class 称号6(Item):
+    显示名称 = 'Limit Conqueror'
+    名称 = 'Limit Conqueror'
+
+    def 城镇属性(self, 属性):
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.最终伤害加成(0.15)
+        属性.技能等级加成('所有', 85, 85, 1)
+
+    def 装备描述(self, 属性):
+        temp = ''
+        temp += 'Strength +40<br>'
+        temp += 'Intelligence +40<br>'
+        temp += 'All.Atk +15%<br>'
+        temp += 'Lv.85 Active Skill +1<br>'
+        return temp
+
+
+class 称号5(Item):
+    显示名称 = 'Hot Summer 2019'
+    名称 = 'Pink Dolphin'
+
+    def 城镇属性(self, 属性):
+        属性.力量 += 30
+        属性.智力 += 30
+        属性.所有属性强化加成(22)
+
+    def 触发属性(self, 属性):
+        属性.进图力量 += 25
+        属性.进图智力 += 25
+
+    def 装备描述(self, 属性):
+        temp = ''
+        temp += 'Strength +30<br>'
+        temp += 'Intelligence +30<br>'
+        temp += 'All Ele +22<br>'
+        temp += '<font color="#00A2E8">Chance Option：</font><br>'
+        temp += 'Strength +25<br>'
+        temp += 'Intelligence +25<br>'
+        return temp
+
+
+class 称号4(Item):
+    显示名称 = 'Heroes of Ethos [Bronze]'
+    名称 = 'Heroes of Ethos [Bronze]'
+
+    def 城镇属性(self, 属性):
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.伤害增加加成(0.05)
+        属性.附加伤害加成(0.05)
+
+    def 装备描述(self, 属性):
+        temp = ''
+        temp += 'Strength +60<br>'
+        temp += 'Intelligence +60<br>'
+        temp += 'Attack Damage +5%<br>'
+        temp += 'Bonus Damage +5%<br>'
         return temp
 
 
 class 称号3(Item):
-    显示名称 = '(15)国庆·圣殿之巅'
-    名称 = '圣殿之巅'
+    显示名称 = 'Heroes of Ethos [Silver]'
+    名称 = 'Heroes of Ethos [Silver]'
 
     def 城镇属性(self, 属性):
-        属性.物理攻击力 += 30
-        属性.魔法攻击力 += 30
-        属性.独立攻击力 += 50
-        属性.所有属性强化加成(15)
-        属性.暴伤 = max(属性.暴伤, 0.10)
-
-    def 触发属性(self, 属性):
-        pass
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.暴击伤害加成(0.05)
+        属性.附加伤害加成(0.05)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '物理攻击力 +30<br>'
-        temp += '魔法攻击力 +30<br>'
-        temp += '独立攻击力 +50<br>'
-        temp += '所有属性强化 +15<br>'
-        temp += '暴伤 +10%（取最高值）<br>'
+        temp += 'Strength +60<br>'
+        temp += 'Intelligence +60<br>'
+        temp += 'Critical Damage +5%<br>'
+        temp += 'Bonus Damage +5%<br>'
         return temp
 
 
 class 称号2(Item):
-    显示名称 = '(14)五一·明日-春华'
-    名称 = '明日-春华'
+    显示名称 = 'Heroes of Ethos [Obsidian]'
+    名称 = 'Heroes of Ethos [Obsidian]'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 35
-        属性.智力 += 35
-        属性.物理攻击力 += 10
-        属性.魔法攻击力 += 10
-        属性.独立攻击力 += 18
-        属性.所有属性强化加成(12)
-
-    def 触发属性(self, 属性):
-        属性.加算冷却缩减 += 0.30
-        pass
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.伤害增加加成(0.05)
+        属性.暴击伤害加成(0.05)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +35<br>'
-        temp += '智力 +35<br>'
-        temp += '物理攻击力 +10<br>'
-        temp += '魔法攻击力 +10<br>'
-        temp += '独立攻击力 +18<br>'
-        temp += '所有属性强化 +12<br>'
-        temp += '<font color="#00A2E8">进图触发属性：</font><br>'
-        temp += '技能冷却 -30%(加算)<br>'
+        temp += 'Strength +60<br>'
+        temp += 'Intelligence +60<br>'
+        temp += 'Attack Damage +5%<br>'
+        temp += 'Critical Damage +5%<br>'
         return temp
 
 
 class 称号1(Item):
-    显示名称 = '(20)DPL专属称号·输出'
-    名称 = 'DPL专属称号·输出'
+    显示名称 = 'Heroes of Ethos [Gold]'
+    名称 = 'Heroes of Ethos [Gold]'
 
     def 城镇属性(self, 属性):
-        属性.力量 += 1251
-        属性.智力 += 1251
-        属性.物理攻击力 += 377
-        属性.魔法攻击力 += 377
-        属性.独立攻击力 += 380
-        属性.所有属性强化加成(166)
-        属性.技能等级加成('主动', 1, 30, 2)
-        属性.技能等级加成('主动', 1, 50, 2)
-        属性.技能等级加成('所有', 1, 50, 2)
+        属性.力量 += 40
+        属性.智力 += 40
+        属性.伤害增加加成(0.05)
+        属性.暴击伤害加成(0.05)
+        属性.附加伤害加成(0.05)
 
     def 装备描述(self, 属性):
         temp = ''
-        temp += '力量 +1251<br>'
-        temp += '智力 +1251<br>'
-        temp += '物理攻击力 +377<br>'
-        temp += '魔法攻击力 +377<br>'
-        temp += '独立攻击力 +380<br>'
-        temp += '所有属性强化 +166<br>'
-        temp += 'Lv1-30 (主动)技能等级+2<br>'
-        temp += 'Lv1-50 (主动)技能等级+2<br>'
-        temp += 'Lv1-50 (所有)技能等级+2<br>'
+        temp += 'Strength +60<br>'
+        temp += 'Intelligence +60<br>'
+        temp += 'Attack Damage +5%<br>'
+        temp += 'Critical Damage +5%<br>'
+        temp += 'Bonus Damage +5%<br>'
         return temp
 
 
