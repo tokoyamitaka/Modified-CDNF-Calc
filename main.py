@@ -184,7 +184,7 @@ class 选择窗口(QWidget):
         self.计算器版本 = currentVersion
         # self.自动检查版本 = versionInfo['AutoCheckUpdate']
         fp.close()
-        self.setWindowTitle(trans('DNF搭配计算器&17173DNF专区'))
+        self.setWindowTitle(trans('CDNF Calculator Modified'))
         self.icon = QIcon('ResourceFiles/img/logo.ico')
         self.setWindowIcon(self.icon)
 
@@ -315,47 +315,33 @@ class 选择窗口(QWidget):
         count = 1
 
         butten = QtWidgets.QPushButton(
-            '  ' + trans('首页') + '\n  ' + trans('设置|打赏|反馈'), self.topFiller)
+            '  ' + trans('Settings') + '\n  ' + trans('Report Crash'), self.topFiller)
 
         # butten = QtWidgets.QPushButton(" " + trans(''), self.topFiller)
         menu = QMenu()
-        action_0 = QAction(trans('设置'), parent=menu)
+        action_0 = QAction(trans('Option'), parent=menu)
         action_0.triggered.connect(lambda state: self.openSet())
-        action_1 = QAction(trans('BUG反馈-Gitee'), parent=menu)
-        action_1.triggered.connect(lambda state: self.打开链接([
-            'https://gitee.com/i_melon/DNFCalculating/issues?state=all'
-        ], "Gitee"))
-        action_2 = QAction('联系我们-QQ-1群', parent=menu)
-        action_2.triggered.connect(lambda state: self.打开链接(
-            ['https://jq.qq.com/?_wv=1027&k=VSNtZ1xv'], "QQ群"))
-        action_3 = QAction('联系我们-QQ-2群', parent=menu)
-        action_3.triggered.connect(lambda state: self.打开链接(
-            ['https://jq.qq.com/?_wv=1027&k=QMgadVkA'], "QQ群"))
-        action_4 = QAction('联系我们-QQ-3群', parent=menu)
-        action_4.triggered.connect(lambda state: self.打开链接(
-            ['https://jq.qq.com/?_wv=1027&k=ekQXpyq0'], "QQ群"))
-        action_5 = QAction(trans('打赏'), parent=menu)
-        action_5.triggered.connect(lambda state, index=count: self.打赏())
-        action_6 = QAction('联系我们-解除限制', parent=menu)
-        action_6.triggered.connect(lambda state: self.打开链接([
-            'https://gitee.com/i_melon/DNFCalculating/issues/I4IOO7'
-        ], "解除限制"))
+        action_1 = QAction(trans('Credits :'), parent=menu)
+        action_2 = QAction('Modifying | Taka', parent=menu)
+        action_3 = QAction('Translating | Taka, Ckl', parent=menu)
+        action_4 = QAction('Packaging | Im Bob!', parent=menu)
+        action_5 = QAction('Report Crash/Bug', parent=menu)
+        action_6 = QAction('Discord : Taka#7302', parent=menu)
         action_7 = QAction(QIcon('ResourceFiles/img/logo.ico'),
-                           trans('手册 源码 日志'),
+                           trans('CDNF Calculator'),
                            parent=menu)
-        action_7.triggered.connect(
-            lambda state: self.打开链接(['http://dnf.17173.com/jsq/?khd'], "首页"))
         menu.addAction(action_7)
         menu.addSeparator()
         menu.addAction(action_0)
-        menu.addSeparator()
-        menu.addAction(action_5)
         menu.addSeparator()
         menu.addAction(action_1)
         menu.addSeparator()
         menu.addAction(action_2)
         menu.addAction(action_3)
         menu.addAction(action_4)
+        menu.addSeparator()
+        menu.addAction(action_5)
+        menu.addSeparator()
         menu.addAction(action_6)
         butten.setMenu(menu)
         # butten.clicked.connect(lambda state, index = count: self.问题反馈())
@@ -383,14 +369,14 @@ class 选择窗口(QWidget):
             "配置文件有误，程序将以默认设置开启！\n请检查以下文件\nResourceFiles\\Config\\基础设置.ini\nResourceFiles\\Config\\攻击目标.ini\nResourceFiles\\Skins\\Skin.ini\n是否以UTF-8编码存储且文件内格式正确"
         )
         self.版本提示 = QMessageBox(
-            QMessageBox.Question, "用户须知",
-            trans("此工具为开源免费软件\n如遇二次售卖获利,请协助反馈举报~") +
-            '\n同时,计算器预设了埋点,收集使用情况供功能分析优化并限制滥用工具的情况,如:职业打开情况、页签打开情况、按钮使用情况等')
+            QMessageBox.Question, "User Notice",
+            trans("Just Click Confirm") +
+            '\nif you click quit, it will close the calculator')
         self.版本提示.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
         self.版本提示A = self.版本提示.button(QMessageBox.Yes)
-        self.版本提示B = self.版本提示.button(QMessageBox.No)
-        self.版本提示A.setText('已知悉')
-        self.版本提示B.setText('退出')
+        self.版本提示B = self.版本提示.button(QMessageBox.No)   
+        self.版本提示A.setText('Confirm')
+        self.版本提示B.setText('Quit')
 
         try:
             if 自动检查更新 == 0:
@@ -511,7 +497,7 @@ class 选择窗口(QWidget):
                 self.打开窗口(index["类名"])
                 return
             else:
-                box = QMessageBox(QMessageBox.Question, "提示", "请选择要打开的版本")
+                box = QMessageBox(QMessageBox.Question, "Notice", "Please select a version to open")
             box.setWindowIcon(self.icon)
             box.setStandardButtons(QMessageBox.Yes | QMessageBox.No
                                    | QMessageBox.Cancel)
@@ -522,16 +508,16 @@ class 选择窗口(QWidget):
                                            | QMessageBox.Cancel)
                 A = box.button(QMessageBox.Yes)
                 B = box.button(QMessageBox.No)
-                A.setText('BUFF')
-                B.setText('战斗')
+                A.setText('Buffer')
+                B.setText('Normal')
                 if index["类名3"] != '无':
                     C = box.button(QMessageBox.YesToAll)
-                    C.setText('前瞻版本-战斗')
+                    C.setText('Last Selection - Normal')
             else:
                 A = box.button(QMessageBox.Yes)
                 B = box.button(QMessageBox.No)
-                A.setText('国服版本')
-                B.setText('前瞻版本')
+                A.setText('Live Server')
+                B.setText('Tet Server (CDNF)')
 
             E = box.button(QMessageBox.Cancel)
             E.setText('取消')
@@ -564,24 +550,24 @@ class 选择窗口(QWidget):
         increase_counter(ga_category="其余功能使用", name="检查更新")
         self.网盘检查()
         if self.网盘报错 == 1:
-            box = QMessageBox(QMessageBox.Question, "提示", "无法自动检查更新，请手动前往官网下载")
+            box = QMessageBox(QMessageBox.Question, "Notice", "Unable to automatically check for update, please go to the official website to download manually")
             box.setWindowIcon(self.icon)
             box.exec_()
         elif self.网盘链接 == '':
-            box = QMessageBox(QMessageBox.Question, "提示", "已经是最新版本计算器！")
+            box = QMessageBox(QMessageBox.Question, "Notice", "Already the latest version of the calculator!")
             box.setWindowIcon(self.icon)
             box.exec_()
         else:
-            box = QMessageBox(QMessageBox.Question, "提示", "检测到新的计算器版本,是否更新？")
+            box = QMessageBox(QMessageBox.Question, "Notice", "New Update detected. Update Calc?")
             box.setWindowIcon(self.icon)
             box.setStandardButtons(QMessageBox.Yes | QMessageBox.No
                                    | QMessageBox.Cancel)
             A = box.button(QMessageBox.Yes)
             B = box.button(QMessageBox.No)
             C = box.button(QMessageBox.Cancel)
-            A.setText("首页查看更新")
-            B.setText("自动更新")
-            C.setText(trans("取消"))
+            A.setText("Manual Update")
+            B.setText("Auto Update")
+            C.setText(trans("Cancel"))
             box.exec_()
             if box.clickedButton() == B:
                 self.update()
@@ -596,12 +582,12 @@ class 选择窗口(QWidget):
             self.遮罩.hide()
             self.pbar.hide()
             path = os.getcwd()
-            box = QMessageBox(QMessageBox.Question, "提示",
-                              "升级完毕,确定后打开最新版本,删除当前旧版本！")
+            box = QMessageBox(QMessageBox.Question, "Notice",
+                              "After the update done, Open the latest version after confirming,and delete current old version！")
             box.setWindowIcon(self.icon)
             box.setStandardButtons(QMessageBox.Yes)
             A = box.button(QMessageBox.Yes)
-            A.setText(trans("确定"))
+            A.setText(trans("Confirm"))
             box.exec_()
             if box.clickedButton() == A:
                 for p in self.worker:
@@ -693,7 +679,7 @@ class SetWindows(QWidget):
         fp.close()
 
         self.setMinimumSize(805, 625)
-        self.setWindowTitle(trans('全局设置选项(需重启计算器生效)'))
+        self.setWindowTitle(trans('Global Settings Option (Calculator will restart after exit and confirming)'))
         self.icon = QIcon('ResourceFiles/img/logo.ico')
         self.setWindowIcon(self.icon)
 
@@ -719,14 +705,14 @@ class SetWindows(QWidget):
             txt_box.setStyleSheet(
                 'QLabel{font-size:13px;color:rgb(175,148,89)}')
             txt2_box = QLabel(self.topFiller)
-            txt2_box.setText(i['名称'])
+            txt2_box.setText(i['Name'])
             txt2_box.resize(70, 20)
             txt2_box.move(60, 30 + 50 * num + 5)
             txt2_box.setStyleSheet(
                 'QLabel{font-size:13px;color:rgb(175,148,89)}')
             self.ComboBoxList[num] = MyQComboBox(self.topFiller,
                                                  useWheel=False)
-            self.ComboBoxList[num].addItems(i['选项'])
+            self.ComboBoxList[num].addItems(i['Option'])
             self.ComboBoxList[num].resize(100, 20)
             self.ComboBoxList[num].move(50 + 80, 30 + 50 * num + 5)
             self.ComboBoxList[num].setCurrentIndex(i['default'])
@@ -750,10 +736,10 @@ class SetWindows(QWidget):
                   encoding='utf-8') as fp:
             json.dump(set_data, fp)
         fp.close()
-        box = QMessageBox(QMessageBox.Warning, "提示", "保存完毕，重启计算器才能生效，是否重启")
+        box = QMessageBox(QMessageBox.Warning, "Notice", "After saving, restart the calculator to take effect, whether to restart")
         box.setWindowIcon(self.icon)
-        yes = box.addButton(self.tr(trans("确定")), QMessageBox.YesRole)
-        no = box.addButton(self.tr(trans("取消")), QMessageBox.NoRole)
+        yes = box.addButton(self.tr(trans("Confirm")), QMessageBox.YesRole)
+        no = box.addButton(self.tr(trans("Cancel")), QMessageBox.NoRole)
         box.exec_()
         if box.clickedButton() == yes:
             self.立即重启()
